@@ -1,0 +1,6 @@
+# Encoder
+epicsEnvSet ECMC_ENC_SOURCE 1
+
+# Commands
+epicsEnvSet ECMC_CMD_AXIS_PLC_ENABLE 1
+epicsEnvSet ECMC_AXIS_EXPR_LINE_1 "ax1.enc.actpos:=ax1.traj.setpos;"
