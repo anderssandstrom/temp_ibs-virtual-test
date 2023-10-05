@@ -1,3 +1,8 @@
+# ECMC_HOME_DEC has no effect at all but we need to define it otherwise
+# the IOC will not load the PVs correctly. Remove me when it is fixed.
+# https://github.com/paulscherrerinstitute/ecmccfg/pull/197
+epicsEnvSet ECMC_HOME_DEC ""
+
 # General
 epicsEnvSet ECMC_AXIS_NO 1
 epicsEnvSet ECMC_MOTOR_NAME m${ECMC_AXIS_NO}
