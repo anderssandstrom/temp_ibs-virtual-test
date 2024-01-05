@@ -23,15 +23,15 @@ epicsEnvSet ECMC_ENC_ABS_OFFSET 0
 # Trajectory
 epicsEnvSet ECMC_VELO 1
 epicsEnvSet ECMC_JOG_VEL ""
-epicsEnvSet ECMC_ACCS_EGU_PER_S2 ${ECMC_VELO}
+epicsEnvSet ECMC_ACCS_EGU_PER_S2 ${ECMC_VELO}  # Reach target spped in 1 second
 epicsEnvSet ECMC_JAR ""
 epicsEnvSet ECMC_EMERG_DECEL ${ECMC_ACCS_EGU_PER_S2}
 
 # Homing
-epicsEnvSet ECMC_HOME_PROC 0
+epicsEnvSet ECMC_HOME_PROC 25
 epicsEnvSet ECMC_HOME_POS 0
 epicsEnvSet ECMC_HOME_VEL_TO ${ECMC_VELO}
-epicsEnvSet ECMC_HOME_VEL_FRM ${ECMC_VELO}
+epicsEnvSet ECMC_HOME_VEL_FRM ${ECMC_HOME_VEL_TO}
 epicsEnvSet ECMC_HOME_ACC ${ECMC_ACCS_EGU_PER_S2}
 
 # Switches
@@ -47,13 +47,13 @@ epicsEnvSet ECMC_DXLM_ENABLE 0
 
 # Position lag
 epicsEnvSet ECMC_MON_LAG_MON_TOL 0
-epicsEnvSet ECMC_MON_LAG_MON_TIME 0  # Actual time is double this value
+epicsEnvSet ECMC_MON_LAG_MON_TIME 0
 epicsEnvSet ECMC_MON_LAG_MON_ENA 0
 
 # At target
-epicsEnvSet ECMC_MON_AT_TARGET_TOL 0
-epicsEnvSet ECMC_MON_AT_TARGET_TIME 0  # This has no effect
-epicsEnvSet ECMC_MON_AT_TARGET_ENA 0
+epicsEnvSet ECMC_MON_AT_TARGET_TOL 0.001  # Half float precision
+epicsEnvSet ECMC_MON_AT_TARGET_TIME 0
+epicsEnvSet ECMC_MON_AT_TARGET_ENA 1
 
 # Velocity
 epicsEnvSet ECMC_MON_VELO_MAX 0
