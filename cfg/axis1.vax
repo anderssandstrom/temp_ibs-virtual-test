@@ -58,6 +58,6 @@ epicsEnvSet ECMC_MON_AT_TARGET_ENA 1
 
 # Velocity
 epicsEnvSet ECMC_MON_VELO_MAX 0
-epicsEnvSet ECMC_MON_VELO_MAX_TRAJ_TIME 1  # This can't be 0
+epicsEnvSet ECMC_MON_VELO_MAX_TRAJ_TIME 1  # This cannot be 0
 epicsEnvSet ECMC_MON_VELO_MAX_DRV_TIME 0
 epicsEnvSet ECMC_MON_VELO_MAX_ENA 0
