@@ -5,7 +5,7 @@ epicsEnvSet ECMC_HOME_DEC ""
 
 # General
 epicsEnvSet ECMC_AXIS_NO 1
-epicsEnvSet ECMC_MOTOR_NAME m${ECMC_AXIS_NO}
+epicsEnvSet ECMC_MOTOR_NAME Axis${ECMC_AXIS_NO}
 epicsEnvSet ECMC_DESC ""
 epicsEnvSet ECMC_EGU ""
 epicsEnvSet ECMC_PREC ""
