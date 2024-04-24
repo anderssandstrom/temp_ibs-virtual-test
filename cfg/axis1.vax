@@ -19,6 +19,7 @@ epicsEnvSet ECMC_ENC_TYPE 0
 epicsEnvSet ECMC_ENC_BITS 0
 epicsEnvSet ECMC_ENC_ABS_BITS 0
 epicsEnvSet ECMC_ENC_ABS_OFFSET 0
+epicsEnvSet ECMC_EC_ENC_ACTPOS ""
 
 # Trajectory
 epicsEnvSet ECMC_VELO 1
