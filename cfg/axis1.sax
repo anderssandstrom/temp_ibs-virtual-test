@@ -1,23 +1,23 @@
 # Encoder
-epicsEnvSet ECMC_ENC_SOURCE 1
+epicsEnvSet ECMC_ENC_SOURCE 1     # Simulates real axis movement, final version this will be zero.
 epicsEnvSet ECMC_ENC_VELO_FILT_ENABLE 0
 epicsEnvSet ECMC_ENC_VELO_FILT_SIZE 1
 
 # Trajectory
-epicsEnvSet ECMC_TRAJ_SOURCE 0
+epicsEnvSet ECMC_TRAJ_SOURCE 1
 epicsEnvSet ECMC_TRAJ_VELO_FILT_ENABLE 0
 epicsEnvSet ECMC_TRAJ_VELO_FILT_SIZE 1
 
 # Commands
 epicsEnvSet ECMC_CMD_FRM_OTHER_PLC_ENABLE 1
 epicsEnvSet ECMC_CMD_AXIS_PLC_ENABLE 1
-epicsEnvSet ECMC_AXIS_EXPR_LINE_1 "ax1.enc.actpos:=ax1.traj.setpos;"
+#epicsEnvSet ECMC_AXIS_EXPR_LINE_1 "ax1.traj.setpos := ax2.traj.setpos - 1;"
 epicsEnvSet ECMC_AXIS_EXPR_LINE_2 ""
-epicsEnvSet ECMC_AXIS_EXPR_LINE_3 ""
+epicsEnvSet ECMC_AXIS_EXPR_LINE_3 "ax1.enc.actpos := ax1.enc.actpos + 0.001;"   # Simulates real axis movement, will not be used o real hardware.
 epicsEnvSet ECMC_AXIS_EXPR_LINE_4 ""
 epicsEnvSet ECMC_AXIS_EXPR_LINE_5 ""
-epicsEnvSet ECMC_AXIS_EXPR_LINE_6 ""
-epicsEnvSet ECMC_AXIS_EXPR_LINE_7 ""
-epicsEnvSet ECMC_AXIS_EXPR_LINE_8 ""
-epicsEnvSet ECMC_AXIS_EXPR_LINE_9 ""
-epicsEnvSet ECMC_AXIS_EXPR_LINE_10 ""
+epicsEnvSet ECMC_AXIS_EXPR_LINE_6 "println(\'traj1 : \', ax1.traj.setpos);"  # debug print
+epicsEnvSet ECMC_AXIS_EXPR_LINE_7 "println(\'posi1 : \', ax1.enc.actpos);"  # debug print
+epicsEnvSet ECMC_AXIS_EXPR_LINE_8 "println(\'traj2 : \', ax2.traj.setpos);"  # debug print
+epicsEnvSet ECMC_AXIS_EXPR_LINE_9 "println(\'posi2 : \', ax2.enc.actpos);"  # debug print
+epicsEnvSet ECMC_AXIS_EXPR_LINE_10 "println(\'----------\');"  # debug print
