@@ -11,8 +11,8 @@ epicsEnvSet ECMC_TRAJ_VELO_FILT_SIZE 1
 # Commands
 epicsEnvSet ECMC_CMD_FRM_OTHER_PLC_ENABLE 1
 epicsEnvSet ECMC_CMD_AXIS_PLC_ENABLE 1
-epicsEnvSet ECMC_AXIS_EXPR_LINE_1 "ax2.enc.actpos := ax1.enc.actpos + 1;"
-epicsEnvSet ECMC_AXIS_EXPR_LINE_2 ""
+epicsEnvSet ECMC_AXIS_EXPR_LINE_1 "ax2.enc.actpos:=ax1.enc.actpos+1;"
+epicsEnvSet ECMC_AXIS_EXPR_LINE_2 "ax1.drv.enable:=ax2.drv.enable;"
 epicsEnvSet ECMC_AXIS_EXPR_LINE_3 ""
 epicsEnvSet ECMC_AXIS_EXPR_LINE_4 ""
 epicsEnvSet ECMC_AXIS_EXPR_LINE_5 ""
